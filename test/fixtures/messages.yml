@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  name: Mynameis
+  target_name: You
+  target_email: you@email.lol
+  body: MyText
+  ip: 192.168.1.101
+  status: 1
+
+two:
+  id: 2
+  name: Mynameis
+  target_name: You2
+  target_email: you2@email.lol
+  body: MyText2
+  ip: 192.168.1.102
+  status: 1

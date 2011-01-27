@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KarnyKutas</title>
+  <%= stylesheet_link_tag "reset", "text", "960", "scaffold", :cache => true, :recursive => true %>
+  <%= javascript_include_tag "jquery.min", "application", :cache => true, :recursive => true %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<!-- TOP MENU -->
+<div id="menu" class="container_16">
+  <div class="grid_1">&nbsp;</div>
+  <div class="grid_14">
+    <span><%= link_to 'Strona główna', root_path %></span>
+    <span><%= link_to 'Dodaj', new_message_path %></span>
+
+    <%= render :partial => 'messages/search_form' %>
+  </div>
+  <div class="grid_1">&nbsp;</div>
+</div>
+<div class="clear"></div>
+
+<div id="content" class="container_16">
+  <div class="grid_16">
+    <%= yield %>
+  </div>
+</div>
+<div class="clear"></div>
+
+</body>
+</html>
