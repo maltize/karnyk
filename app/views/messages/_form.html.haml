@@ -1,0 +1,13 @@
+- simple_form_for @message do |f|
+  - if @message.errors.any?
+
+  = f.input :name
+
+  = f.input :target_name
+
+  = f.input :target_email
+
+  = f.input :body
+    
+  .actions
+    = f.button :submit
