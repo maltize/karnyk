@@ -9,6 +9,8 @@ gem 'mysql2'
 
 gem 'will_paginate', '~> 3.0.beta'
 
+gem 'haml'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
