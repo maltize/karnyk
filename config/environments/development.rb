@@ -22,5 +22,15 @@ KarnyKutas::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+
+  ActionMailer::Base.smtp_settings = {
+     :address => "smtp.sendgrid.net",
+     :port => '25',
+     :domain => "karnykutas.com",
+     :authentication => :plain,
+     :user_name => "r.wilde@volcanic.co.uk",
+     :password => "90afoots"
+   }
+
 end
 

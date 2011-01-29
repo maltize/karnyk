@@ -11,6 +11,8 @@ gem 'will_paginate', '~> 3.0.beta'
 
 gem 'haml'
 
+gem 'simple_form'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

@@ -1,6 +1,6 @@
 class UserMailer < ActionMailer::Base
 
-  SYSTEM_EMAIL = "to@karnykutas.com"
+  SYSTEM_EMAIL = "info@karnykutas.com"
 
   def notify(message)
     @message = message
