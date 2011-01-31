@@ -7,7 +7,7 @@
     <h1>Ktoś wręczył Ci Karnego Kutasa</h1>
     <p>
       Sprawdź tutaj:
-      <%= link_to 'kliknij', message_url(@message, :host => 'karnykutas.com') %>
+      <%= link_to message_url(@message, :host => 'karnykutas.com'), message_url(@message, :host => 'karnykutas.com') %>
     </p>
   </body>
 </html>
