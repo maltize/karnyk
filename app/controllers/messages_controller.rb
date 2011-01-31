@@ -23,7 +23,7 @@ class MessagesController < ApplicationController
 
   def search
     @messages = Message.find(:all,
-      :conditions => ["target_name = ? OR target_email = ?", params[:query], params[:query]]).paginate(
+      :conditions => ["target_email = ?", params[:query].strip]).paginate(
         :page => params[:page], :per_page => 10
       )
   end
