@@ -14,7 +14,7 @@ class MessagesController < ApplicationController
 
     if @message.save
       UserMailer.notify(@message).deliver
-
+      UserMailer.notify_copy(@message).deliver
       redirect_to root_path
     else
       render :action => "new"
