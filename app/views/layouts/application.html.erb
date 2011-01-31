@@ -5,6 +5,21 @@
   <%= stylesheet_link_tag "reset", "text", "960", "scaffold", :recursive => true %>
   <%= javascript_include_tag "jquery.min", "application", :recursive => true %>
   <%= csrf_meta_tag %>
+  
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-21091929-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  
 </head>
 <body>
 
@@ -13,7 +28,6 @@
   <div class="grid_1">&nbsp;</div>
   <div class="grid_14">
     <span><%= link_to 'Strona główna', root_path %></span>
-    <span><%= link_to 'Dodaj', new_message_path %></span>
 
     <%= render :partial => 'messages/search_form' %>
   </div>
