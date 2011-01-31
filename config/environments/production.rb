@@ -52,8 +52,8 @@ KarnyKutas::Application.configure do
      :port => '25',
      :domain => "karnykutas.com",
      :authentication => :plain,
-     :user_name => "r.wilde@volcanic.co.uk",
-     :password => "90afoots"
+     :user_name => Base64.decode64(Base64.encode64("r.wilde@volcanic.co.uk")),
+     :password => Base64.decode64(Base64.encode64("90afoots"))
    }
 
    ENV['BCC_EMAIL'] = "log@karnykutas.com"
