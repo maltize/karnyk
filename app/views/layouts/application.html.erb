@@ -35,6 +35,23 @@
 </div>
 <div class="clear"></div>
 
+<!-- FLASH MESSAGE -->
+<div id="flash_message" class="container_16">
+  <div class="grid_1">&nbsp;</div>
+  <div class="grid_14">
+    <% if flash[:notice] %>
+      <p id="flash_notice"><%= flash[:notice] %></p>
+      <% flash[:notice] = nil %>
+    <% end %>
+    <% if flash[:error] %>
+      <p id="flash_error"><%= flash[:error] %></p>
+      <% flash[:error] = nil %>
+    <% end %>
+  </div>
+  <div class="grid_1">&nbsp;</div>
+</div>
+<div class="clear"></div>
+
 <div id="content" class="container_16">
   <div class="grid_16">
     <%= yield %>
