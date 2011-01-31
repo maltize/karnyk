@@ -20,6 +20,7 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(params[:message])
+    @message.ip = request.env["HTTP_X_FORWARDED_FOR"]
 
     respond_to do |format|
       if @message.save
