@@ -10,7 +10,6 @@ class UserMailerTest < ActionMailer::TestCase
 
     assert_equal [UserMailer::SYSTEM_EMAIL], email.from
     assert_equal [message.target_email], email.to
-    assert_equal "Karny Kutas - od kogo dostałeś?", email.subject
     assert_match /#{message.id}/, email.encoded
   end
 
