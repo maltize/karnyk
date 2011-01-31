@@ -1,0 +1,29 @@
+!!!
+%html
+  %head
+    %title Karny Kutas
+    %html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
+    = render :partial => 'layouts/stylesheets'
+    = render :partial => 'layouts/javascripts'
+
+    = csrf_meta_tag
+
+  %body
+
+    %header
+      = link_to 'Strona główna', root_path
+
+    %section
+      #flash_message
+        - if flash[:notice]
+          %p#flash_notice
+            = flash[:notice]
+          - flash[:notice] = nil
+        - if flash[:error]
+          %p#flash_error
+            = flash[:error]
+          - flash[:error] = nil
+      = yield
+
+    %section
+      = render :partial => 'messages/search_form'
