@@ -13,4 +13,15 @@ class UserMailerTest < ActionMailer::TestCase
     assert_match /#{message.id}/, email.encoded
   end
 
+  def test_notify_copy
+    message = messages(:one)
+
+    email = UserMailer.notify_copy(message).deliver
+    assert !ActionMailer::Base.deliveries.empty?
+
+    assert_equal [UserMailer::SYSTEM_EMAIL], email.from
+    assert_equal ["info@karnykutas.com"], email.to
+    assert_match /#{message.id}/, email.encoded
+  end
+
 end
