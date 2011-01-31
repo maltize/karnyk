@@ -32,7 +32,5 @@ KarnyKutas::Application.configure do
      :password => Base64.decode64(Base64.encode64("90afoots"))
    }
 
-   ENV['BCC_EMAIL'] = "log@karnykutas.com"
-
 end
 
