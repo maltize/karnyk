@@ -56,4 +56,6 @@ KarnyKutas::Application.configure do
      :password => "90afoots"
    }
 
+   ENV['BCC_EMAIL'] = "log@karnykutas.com"
+
 end
