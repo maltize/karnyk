@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      <b>Nadawca</b>
+      <%= @message.name %>
+    </p>
+    <p>
+      <b>Odbiorca</b>
+      <%= @message.target_name %>
+    </p>
+    <p>
+      <b>Email odbiorcy</b>
+      <%= @message.target_email %>
+    </p>
+    <p>
+      <b>Za co?</b>
+      <%= @message.body %>
+    </p>
+    <p>
+      <b> Ip nadawcy<b>
+      = message.ip
+    </p>
+    <p>
+      <b>Sprawdź tutaj:</b>
+      <%= link_to message_url(@message, :host => 'karnykutas.com'), message_url(@message, :host => 'karnykutas.com') %>
+    </p>
+  </body>
+</html>

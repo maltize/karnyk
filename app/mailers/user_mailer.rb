@@ -4,7 +4,7 @@ class UserMailer < ActionMailer::Base
 
   def notify(message)
     @message = message
-    mail(:from => SYSTEM_EMAIL, :to => message.target_email, :bcc => 'info@karnykutas.com',
+    mail(:from => SYSTEM_EMAIL, :to => message.target_email,
       :subject => "Otrzymujesz Karnego Kutasa?")
   end
 
