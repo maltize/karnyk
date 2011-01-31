@@ -16,8 +16,10 @@ class MessagesController < ApplicationController
       UserMailer.notify(@message).deliver
       UserMailer.notify_copy(@message).deliver
       redirect_to root_path
+      flash[:notice] = "Karny Kutas został poprawnie wysłany."
     else
       render :action => "new"
+      flash[:error] = "Karny kutas nie wysłany"
     end
   end
 
