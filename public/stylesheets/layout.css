@@ -1,3 +1,48 @@
+header, section, footer, aside, nav, article {
+  display: block;
+}
+
 body {
-  
+  background-color: #ececec;
+  background-image: url("/images/bg.gif");
+  color: #313B41;
+  font: 14px/1.6em "Lucida Grande","Verdana",sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  width: 642px;
+}
+
+h1 {
+  color: #002D4C;
+  font: bold 24px/1.25em "Helvetica","Verdana",sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section, header {
+  margin: 14px 7px 0px 7px;
+  padding: 14px;
+}
+
+/* COLORS */
+
+.pearl {
+  background-color: #f36b59;
+  color: #fff;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.turquoise {
+  background-color: #7dcdc4;
+  color: #fff;
+}
+
+.shadow {
+  -moz-box-shadow: 7px 7px 0px #dadada;
+  -webkit-box-shadow: 7px 7px 0px #dadada;
+  box-shadow: 7px 7px 0px #dadada;
+  -khtml-box-shadow: 7px 7px 0px #dadada;
 }

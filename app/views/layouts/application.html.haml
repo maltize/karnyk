@@ -11,9 +11,9 @@
   %body
 
     %header
-      = link_to 'Strona główna', root_path
+      = link_to image_tag('/images/logo.gif', :alt => 'Karny Kutas', :title => 'Karny Kutas'), root_path
 
-    %section
+    %section#main_content.white.shadow
       #flash_message
         - if flash[:notice]
           %p#flash_notice
@@ -25,5 +25,5 @@
           - flash[:error] = nil
       = yield
 
-    %section
+    %section.turquoise.shadow
       = render :partial => 'messages/search_form'

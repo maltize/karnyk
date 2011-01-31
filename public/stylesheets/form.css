@@ -1,0 +1,86 @@
+div label abbr {
+  color: #f36b59;
+}
+
+div.string {
+  margin: 14px;
+}
+
+div.string label {
+  display: block;
+  width: 150px;
+  text-align: right;
+  float: left;
+}
+div.string input {
+  width: 300px;
+  border: 1px solid #d2d9dc;
+  padding: 5px;
+  -moz-box-shadow: 0px 0px 3px #a6b0b5;
+  -webkit-box-shadow: 0px 0px 3px #a6b0b5;
+  box-shadow: 0px 0px 3px #a6b0b5;
+  -khtml-box-shadow: 0px 0px 3px #a6b0b5;
+}
+
+span.error {
+  clear: both;
+  display: block;
+  padding-left: 150px;
+  color: #f36b59;
+}
+
+div.text {
+  margin: 20px;
+}
+
+div.text label {
+  display: block;
+  width: 150px;
+  text-align: right;
+  float: left;
+}
+div.text textarea {
+  width: 300px;
+  height: 80px;
+  border: 1px solid #d2d9dc;
+  padding: 5px;
+  -moz-box-shadow: 0px 0px 3px #a6b0b5;
+  -webkit-box-shadow: 0px 0px 3px #a6b0b5;
+  box-shadow: 0px 0px 3px #a6b0b5;
+  -khtml-box-shadow: 0px 0px 3px #a6b0b5;
+}
+
+
+div.boolean {
+  margin: 14px;
+  padding-left: 150px;
+}
+
+div.boolean label {
+  margin-left:10px;
+}
+
+div.boolean input {
+  
+}
+
+.actions input.button {
+  position: relative;
+  background-color: #f36b59;
+  border: none;
+  color: white;
+  padding: 5px;
+  -moz-box-shadow: 7px 7px 0px #dadada;
+  -webkit-box-shadow: 7px 7px 0px #dadada;
+  box-shadow: 7px 7px 0px #dadada;
+  -khtml-box-shadow: 7px 7px 0px #dadada;
+}
+
+.actions input.button:focus {
+  top: 7px;
+  left: 7px;
+  -moz-box-shadow: 0px 0px 0px #dadada;
+  -webkit-box-shadow: 0px 0px 0px #dadada;
+  box-shadow: 0px 0px 0px #dadada;
+  -khtml-box-shadow: 0px 0px 0px #dadada;
+}
