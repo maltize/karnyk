@@ -8,6 +8,7 @@ one:
   body: MyText
   ip: 192.168.1.101
   status: 1
+  terms_conditions: true
 
 two:
   id: 2
@@ -17,3 +18,4 @@ two:
   body: MyText2
   ip: 192.168.1.102
   status: 1
+  terms_conditions: true
