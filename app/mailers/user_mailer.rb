@@ -5,12 +5,12 @@ class UserMailer < ActionMailer::Base
   def notify(message)
     @message = message
     mail(:from => SYSTEM_EMAIL, :to => message.target_email,
-      :subject => "#{message.}Otrzymujesz Karnego Kutasa?")
+      :subject => "#{message.target_name}, otrzymujesz Karnego Kutasa?")
   end
 
   def notify_copy(message)
     @message = message
-    mail(:from => SYSTEM_EMAIL, :to => 'info@karnykutas.com', :subject => "#{message.id}")
+    mail(:from => SYSTEM_EMAIL, :to => SYSTEM_EMAIL, :subject => "#{message.id}")
   end
 
   def attach_logo

@@ -9,6 +9,7 @@ one:
   ip: 192.168.1.101
   status: 1
   terms_conditions: true
+  permalink: you_email_lol
 
 two:
   id: 2
@@ -19,3 +20,4 @@ two:
   ip: 192.168.1.102
   status: 1
   terms_conditions: true
+  permalink: you2_email_lol

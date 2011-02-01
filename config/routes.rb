@@ -1,10 +1,11 @@
 KarnyKutas::Application.routes.draw do
 
-  resources :messages do
+  resources :messages, :only => [:new, :create] do
     collection do
       get 'search'
     end
   end
+  match 'messages/:permalink' => 'messages#show', :via => :get, :as => :message
 
   root :to => "messages#new"
 
