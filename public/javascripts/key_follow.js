@@ -1,9 +1,9 @@
 function signsLeft(textarea, limit, snippet){
     var text = $("#" + textarea).val()
-    var length = 100 - text.length
+    var length = 140 - text.length
 
     if (length <= 0) {
-        $("#" + textarea).val(text.substr(0,100))
+        $("#" + textarea).val(text.substr(0,140))
         $("#" + snippet).addClass("formError")
         length = 0
     }
