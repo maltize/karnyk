@@ -19,7 +19,7 @@ h1 {
   padding: 0;
 }
 
-section, header {
+section, header, footer {
   margin: 14px 7px 0px 7px;
   padding: 14px;
 }
