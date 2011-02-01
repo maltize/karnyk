@@ -24,6 +24,7 @@ class MessagesController < ApplicationController
   end
 
   def search
+    @first_message = Message.find(:first, :conditions => ["target_email = ?", params[:query].strip])
     @messages = Message.find(:all,
       :conditions => ["target_email = ?", params[:query].strip]).paginate(
         :page => params[:page], :per_page => 10
