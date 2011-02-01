@@ -8,6 +8,15 @@
   = f.input :target_email
 
   = f.input :body
+  
+  #signs_left
+    pozostało
+    %p= 100
+    
+  :javascript
+    $("#message_body").keyup(function(){
+        signsLeft("message_body", 100, "signs_left")
+    })
 
   = f.input :terms_conditions, :label => 'Akceptuje regulamin'
       
