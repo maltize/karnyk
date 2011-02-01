@@ -12,6 +12,10 @@
 
     %header
       = link_to image_tag('/images/logo.gif', :alt => 'Karny Kutas', :title => 'Karny Kutas'), root_path
+      %ul
+        %li ZNAJOMY CI PODPADŁ?
+        %li CHUCK NORIS NIE SPROSTAŁ ZADANIU?
+        %li KARNY KUTAS DOPOMOŻE!
 
     %section#main_content.white.shadow
       #flash_message
@@ -26,4 +30,5 @@
       = yield
 
     %section.turquoise.shadow
+      %h2 SPRAWDŹ SWOJE KARNE KUTASY
       = render :partial => 'messages/search_form'
