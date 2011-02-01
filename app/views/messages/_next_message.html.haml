@@ -1,0 +1,14 @@
+.message
+  %p
+    %b Od kogo:
+    = next_message.name
+
+  %p
+    %b Dla kogo:
+    = next_message.target_name
+
+  %p
+    %b Za co?
+    = next_message.body
+  %p
+    %b= next_message.created_at
