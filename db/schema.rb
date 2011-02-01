@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110131210045) do
+ActiveRecord::Schema.define(:version => 20110131224954) do
 
   create_table "messages", :force => true do |t|
     t.string   "name"
@@ -22,8 +22,10 @@ ActiveRecord::Schema.define(:version => 20110131210045) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "terms_conditions"
+    t.string   "permalink"
   end
 
+  add_index "messages", ["permalink"], :name => "index_messages_on_permalink"
   add_index "messages", ["status"], :name => "index_messages_on_status"
   add_index "messages", ["target_email"], :name => "index_messages_on_target_email"
   add_index "messages", ["target_name"], :name => "index_messages_on_target_name"

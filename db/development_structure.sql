@@ -8,11 +8,14 @@ CREATE TABLE `messages` (
   `status` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
+  `terms_conditions` tinyint(1) DEFAULT NULL,
+  `permalink` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_messages_on_target_name` (`target_name`),
   KEY `index_messages_on_target_email` (`target_email`),
-  KEY `index_messages_on_status` (`status`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  KEY `index_messages_on_status` (`status`),
+  KEY `index_messages_on_permalink` (`permalink`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `schema_migrations` (
   `version` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -20,3 +23,7 @@ CREATE TABLE `schema_migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT INTO schema_migrations (version) VALUES ('20110127212338');
+
+INSERT INTO schema_migrations (version) VALUES ('20110131210045');
+
+INSERT INTO schema_migrations (version) VALUES ('20110131224954');

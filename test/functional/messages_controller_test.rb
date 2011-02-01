@@ -19,7 +19,7 @@ class MessagesControllerTest < ActionController::TestCase
   end
 
   test "should show message" do
-    get :show, :id => @message.to_param
+    get :show, :permalink => @message.permalink
     assert_response :success
   end
 
