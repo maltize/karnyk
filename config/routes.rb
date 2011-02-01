@@ -1,18 +1,9 @@
 KarnyKutas::Application.routes.draw do
 
-<<<<<<< Updated upstream
   match 'karny/szukaj' => 'messages#search', :via => :get, :as => :search_messages
   match 'karny/nowy' => 'messages#new', :via => :get, :as => :new_message
   match 'karny/nowy' => 'messages#create', :via => :post, :as => :messages
   match 'karny/:permalink' => 'messages#show', :via => :get, :as => :message
-=======
-  resources :messages, :only => [:new, :create] do
-    collection do
-      get 'search'
-    end
-  end
-  match 'messages/:permalink' => 'messages#show', :via => :get, :as => :message
->>>>>>> Stashed changes
 
   root :to => "messages#new"
 
