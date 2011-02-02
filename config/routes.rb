@@ -5,6 +5,9 @@ KarnyKutas::Application.routes.draw do
   match 'karny/nowy' => 'messages#create', :via => :post, :as => :messages
   match 'karny/:permalink' => 'messages#show', :via => :get, :as => :message
 
+  match 'regulamin' => 'static#rules', :as => :rules
+  match 'prywatnosc' => 'static#privacy', :as => :privacy
+
   root :to => "messages#new"
 
   # The priority is based upon order of creation:
