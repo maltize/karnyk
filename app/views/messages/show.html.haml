@@ -1,0 +1,4 @@
+%h1= @message.try(:target_email)
+= render :partial => 'messages/first_message', :collection => [@message]
+= render :partial => 'messages/next_message', :collection => @messages
+= will_paginate @messages

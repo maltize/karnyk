@@ -2,6 +2,9 @@ class MessagesController < ApplicationController
 
   def show
     @message = Message.where(:permalink => params[:permalink]).first
+    @messages = Message.where(:target_email => @message.target_email).where(['id != ?', @message.id]).paginate(
+      :page => params[:page], :per_page => 20
+    )
   end
 
   def new
@@ -24,10 +27,10 @@ class MessagesController < ApplicationController
   end
 
   def search
-    @first_message = Message.where(:target_email => params[:query].strip).first
+    @message = Message.where(:target_email => params[:query].strip).first
     @messages = Message.where(:target_email => params[:query].strip).paginate(
-        :page => params[:page], :per_page => 10
-      )
+      :page => params[:page], :per_page => 20
+    )
   end
 
 end
