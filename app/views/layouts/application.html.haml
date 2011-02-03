@@ -11,11 +11,16 @@
   %body
 
     %header
-      = link_to image_tag('/images/logo.gif', :size => '225x138', :alt => 'Karny Kutas', :title => 'Karny Kutas', :border => '0'), root_path
-      %ul
-        %li ZNAJOMY CI PODPADŁ?
-        %li CHUCK NORIS NIE SPROSTAŁ ZADANIU?
-        %li KARNY KUTAS DOPOMOŻE!
+      #logo
+        = link_to image_tag('/images/logo.gif', :size => '225x138', :alt => 'Karny Kutas', :title => 'Karny Kutas', :border => '0'), root_path
+      #teaser.shadow
+        %ul
+          %li
+            %h3 ZNAJOMY CI PODPADŁ?
+          %li
+            %h3 CHUCK NORIS NIE SPROSTAŁ ZADANIU?
+          %li
+            %h3 KARNY KUTAS DOPOMOŻE!
 
     %section#main_content.white.shadow
       #flash_message

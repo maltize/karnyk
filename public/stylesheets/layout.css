@@ -12,6 +12,31 @@ body {
   width: 642px;
 }
 
+#logo, #teaser {
+  width: 274px;
+  display:inline-block;
+  padding: 14px;
+  margin-left: 14px;
+}
+
+#logo {
+
+}
+
+#teaser {
+  font-size: 2em;
+  color: white;
+  background-color: #309ec1;
+}
+
+#teaser ul li {
+  margin-left: 14px;
+  list-style-type: disc;
+}
+
+#teaser ul li h3 {
+  font-size: 1em;
+}
 h1 {
   color: #002D4C;
   font: bold 24px/1.25em "Helvetica","Verdana",sans-serif;
@@ -19,7 +44,7 @@ h1 {
   padding: 0;
 }
 
-section, header, footer {
+section, footer {
   margin: 14px 7px 0px 7px;
   padding: 14px;
 }
