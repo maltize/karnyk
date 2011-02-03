@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
     @message = Message.where(:permalink => params[:permalink]).first
     @messages = Message.where(:target_email => @message.target_email).where(['id != ?', @message.id]).paginate(
       :page => params[:page], :per_page => 20
-    )
+    ) if @message
   end
 
   def new
