@@ -25,8 +25,13 @@ div.string input {
 span.error {
   clear: both;
   display: block;
-  padding-left: 150px;
+  margin-left: 150px;
+  padding-left: 20px;
   color: #f36b59;
+}
+
+.input.boolean.required.field_with_errors .error {
+  margin-left: 0px;
 }
 
 div.text {
@@ -100,4 +105,11 @@ div.boolean input {
 
 #signs_left.formError {
   color: #f36b59;
+}
+
+.error {
+  background-image: url("/images/error.png");
+  background-position: left;
+  background-color: transparent;
+  background-repeat: no-repeat;
 }
