@@ -7,7 +7,7 @@ body {
   background-image: url("/images/bg.gif");
   color: #313B41;
   font: 14px/1.6em "Lucida Grande","Verdana",sans-serif;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 0;
   width: 642px;
 }
@@ -37,16 +37,31 @@ body {
 #teaser ul li h3 {
   font-size: 1em;
 }
+
 h1 {
-  color: #002D4C;
-  font: bold 24px/1.25em "Helvetica","Verdana",sans-serif;
+  color: #f36b59;
   margin: 0;
   padding: 0;
+  font-size: 2.5em;
+}
+
+#search h1 {
+  font-size: 2em;
+  color: #fff;
+}
+
+footer {
+  background-color: #309ec1;
+  color: white;
 }
 
 section, footer {
   margin: 14px 7px 0px 7px;
   padding: 14px;
+}
+
+footer ul li {
+  display:inline;
 }
 
 /* COLORS */

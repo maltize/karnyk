@@ -1,4 +1,4 @@
-= javascript_include_tag "jquery.min", "application", "key_follow", :recursive => true
+= javascript_include_tag "jquery.min", "application", "key_follow", "cufon-yui", "Bebas_Neue_400.font",  :recursive => true
 
 :javascript
   var _gaq = _gaq || [];
@@ -10,3 +10,9 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+  
+:javascript
+  Cufon.replace('h1');
+  Cufon.replace('h2');
+  //Cufon.replace('h3');
+  // Cufon.replace('#menu');

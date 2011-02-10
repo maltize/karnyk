@@ -16,11 +16,11 @@
       #teaser.shadow
         %ul
           %li
-            %h3 ZNAJOMY CI PODPADŁ?
+            %h2 ZNAJOMY CI PODPADŁ?
           %li
-            %h3 CHUCK NORIS NIE SPROSTAŁ ZADANIU?
+            %h2 CHUCK NORIS NIE SPROSTAŁ ZADANIU?
           %li
-            %h3 KARNY KUTAS DOPOMOŻE!
+            %h2 KARNY KUTAS DOPOMOŻE!
 
     %section#main_content.white.shadow
       #flash_message
@@ -34,11 +34,11 @@
           - flash[:error] = nil
       = yield
 
-    %section.turquoise.shadow
-      %h2 SPRAWDŹ SWOJE KARNE KUTASY
+    %section#search.turquoise.shadow
+      %h1 SPRAWDŹ SWOJE KARNE KUTASY
       = render :partial => 'messages/search_form'
     
-    %footer
+    %footer.shadow
       %ul
         %li
           = link_to "Regulamin", rules_path

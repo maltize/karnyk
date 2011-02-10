@@ -64,6 +64,10 @@ div.boolean input {
   
 }
 
+.actions {
+  text-align: right;
+}
+
 .actions input.button {
   position: relative;
   background-color: #f36b59;
