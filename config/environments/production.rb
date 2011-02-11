@@ -47,19 +47,19 @@ KarnyKutas::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  # ActionMailer::Base.smtp_settings = {
-  #   :address => "smtp.sendgrid.net",
-  #   :port => '25',
-  #   :domain => "karnykutas.com",
-  #   :authentication => :plain,
-  #   :user_name => "r.wilde@volcanic.co.uk",
-  #   :password => "90afoots"
-  # }
-
   ActionMailer::Base.smtp_settings = {
-    :address => 'jrc.one.pl',
-    :port => 25,
-    :domain => 'karnykutas.com'
+    :address => "smtp.sendgrid.net",
+    :port => '25',
+    :domain => "karnykutas.com",
+    :authentication => :plain,
+    :user_name => "r.wilde@volcanic.co.uk",
+    :password => "90afoots"
   }
+
+  # ActionMailer::Base.smtp_settings = {
+  #   :address => 'jrc.one.pl',
+  #   :port => 25,
+  #   :domain => 'karnykutas.com'
+  # }
 
 end
