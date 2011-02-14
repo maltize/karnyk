@@ -35,19 +35,20 @@
       = yield
 
     %section#search.turquoise.shadow
-      %h1 Sprawdź swoje Karne Kutasy
+      %ul
+        %li
+          %h1 Sprawdź swoje Karne Kutasy
       = render :partial => 'messages/search_form'
     
     %footer.shadow
       %ul
-        %li
-          = link_to "Regulamin", rules_path
-        %li
-          = link_to "Polityka prywatności", privacy_path
-        %li
-          = link_to "Contact"
+        %li= link_to "Regulamin", rules_path
+        %li= '|'
+        %li= link_to "Polityka prywatności", privacy_path
+        %li= '|'
+        %li= link_to "Contact"
       %ul
         %li
-          Powered by vidlasty & maltize |
+          Powered by vidlasty & maltize
         %li
           Supported by volcanic

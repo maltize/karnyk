@@ -1,0 +1,35 @@
+.karny_count {
+  text-align: center;
+  vertical-align: middle;
+  float: left;
+  margin: 0 10px 0 0;
+  font-size: 3em;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.first_message,
+.message {
+  border-bottom: 1px solid #eeeeee; 
+  margin: 0px 20px;
+}
+
+.first_message .body, .message .body {
+  color: #8b6b4c;
+}
+
+.first_message .body {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+h4 {
+  color: black;
+  font-size: 2em;
+}
+
+.first_message .date,
+.message .date {
+  color: #989898;
+  font-size: 0.8em;
+}

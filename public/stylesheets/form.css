@@ -11,23 +11,45 @@ div.string label {
   width: 150px;
   text-align: right;
   float: left;
+  margin-right: 20px;
 }
+
 div.string input {
   width: 300px;
-  border: 1px solid #d2d9dc;
   padding: 5px;
-  -moz-box-shadow: 0px 0px 3px #a6b0b5;
-  -webkit-box-shadow: 0px 0px 3px #a6b0b5;
-  box-shadow: 0px 0px 3px #a6b0b5;
-  -khtml-box-shadow: 0px 0px 3px #a6b0b5;
+  border: 1px solid #d2d9dc;
+  -moz-box-shadow: 0px 0px 0px 5px #f7f9fa;
+  -webkit-box-shadow: 0px 0px 0px 5px #f7f9fa;
+  box-shadow: 0px 0px 0px 5px #f7f9fa;
+  -khtml-box-shadow: 0px 0px 0px 5px #f7f9fa;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+}
+
+div.string input:focus {
+  border: 1px solid #b7d4ea;
+  -moz-box-shadow: 0px 0px 0px 5px #f0f7fc;
+  -webkit-box-shadow: 0px 0px 0px 5px #f0f7fc;
+  box-shadow: 0px 0px 0px 5px #f0f7fc;
+  -khtml-box-shadow: 0px 0px 0px 5px #f0f7fc;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
 }
 
 span.error {
   clear: both;
   display: block;
-  margin-left: 150px;
+  margin-left: 170px;
   padding-left: 20px;
   color: #f36b59;
+}
+
+.input span {
+  margin-top: 5px;
 }
 
 .input.boolean.required.field_with_errors .error {
@@ -43,16 +65,34 @@ div.text label {
   width: 150px;
   text-align: right;
   float: left;
+  margin-right: 20px;
 }
+
 div.text textarea {
   width: 300px;
   height: 80px;
-  border: 1px solid #d2d9dc;
   padding: 5px;
-  -moz-box-shadow: 0px 0px 3px #a6b0b5;
-  -webkit-box-shadow: 0px 0px 3px #a6b0b5;
-  box-shadow: 0px 0px 3px #a6b0b5;
-  -khtml-box-shadow: 0px 0px 3px #a6b0b5;
+  border: 1px solid #d2d9dc;
+  -moz-box-shadow: 0px 0px 0px 5px #f7f9fa;
+  -webkit-box-shadow: 0px 0px 0px 5px #f7f9fa;
+  box-shadow: 0px 0px 0px 5px #f7f9fa;
+  -khtml-box-shadow: 0px 0px 0px 5px #f7f9fa;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+}
+
+div.text textarea:focus {
+  border: 1px solid #b7d4ea;
+  -moz-box-shadow: 0px 0px 3px 5px #f0f7fc;
+  -webkit-box-shadow: 0px 0px 3px 5px #f0f7fc;
+  box-shadow: 0px 0px 3px 5px #f0f7fc;
+  -khtml-box-shadow: 0px 0px 3px 5px #f0f7fc;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
 }
 
 
@@ -112,4 +152,16 @@ div.boolean input {
   background-position: left;
   background-color: transparent;
   background-repeat: no-repeat;
+}
+
+#search input {
+  color: white;
+  border: none;
+  margin: none;
+  background: #4ea99f;
+  padding: 5px;
+  -moz-box-shadow: 0px 0px 3px #a6b0b5;
+  -webkit-box-shadow: 0px 0px 3px #a6b0b5;
+  box-shadow: 0px 0px 3px #a6b0b5;
+  -khtml-box-shadow: 0px 0px 3px #a6b0b5;
 }
