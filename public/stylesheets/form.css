@@ -155,13 +155,26 @@ div.boolean input {
 }
 
 #search input {
-  color: white;
-  border: none;
-  margin: none;
   background: #4ea99f;
-  padding: 5px;
-  -moz-box-shadow: 0px 0px 3px #a6b0b5;
-  -webkit-box-shadow: 0px 0px 3px #a6b0b5;
-  box-shadow: 0px 0px 3px #a6b0b5;
-  -khtml-box-shadow: 0px 0px 3px #a6b0b5;
+  width: 300px;
+  padding: 5px 9px;
+  border-top: 1px solid #7dcdc4;
+  border-right: 1px solid #84d1c8;
+  border-left: 1px solid #84d1c8;
+  border-bottom: 1px solid #9cdad3;
+  -moz-box-shadow: 0px 0px 5px 3px #439d91 inset;
+  -webkit-box-shadow: 0px 0px 5px 3px #439d91 inset;
+  box-shadow: 0px 0px 5px 3px #439d91 inset;
+  -khtml-box-shadow: 0px 0px 5px 3px #439d91 inset;
+  -moz-border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -khtml-border-radius: 13px;
+  border-radius: 10px;
+  width: 240px;
+  color: white;
+}
+
+#search span.submit input {
+  width: 100px;
+  cursor: pointer;
 }
