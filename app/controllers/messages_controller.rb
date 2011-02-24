@@ -28,9 +28,15 @@ class MessagesController < ApplicationController
 
   def search
     @message = Message.where(:target_email => params[:query].strip).first
-    @messages = Message.where(:target_email => params[:query].strip).paginate(
+    if @message
+      @messages = Message.where(:target_email => params[:query].strip).paginate(
       :page => params[:page], :per_page => 20
     )
+    else
+      @message = Message.new
+      flash[:error] = "ten adres nie otrzymał Karnego Kutasa"
+      render :action => "new"
+    end
   end
 
 end
