@@ -34,7 +34,7 @@ class MessagesController < ApplicationController
     )
     else
       @message = Message.new
-      flash[:error] = "ten adres nie otrzymał Karnego Kutasa"
+      flash[:error] = "ten adres nie otrzymał Karnego Kutasa. Wyślij tego pierwszego!"
       render :action => "new"
     end
   end
