@@ -1,5 +1,9 @@
-.karny_count.pearl{ :title => "Karnych Kutasów otrzymano: #{@messages.count}"}= @messages.count
-%h4= @message.try(:target_email)
-= render :partial => 'messages/first_message', :collection => @messages[0..0]
-= render :partial => 'messages/next_message', :collection => @messages[1..10]
+.first.clearfix
+  .header.clearfix
+    %h2
+      = '#'
+      = @messages.count
+  .account{ :styles => 'float: rigth;'}= @message.try(:target_email)
+  = render :partial => 'messages/first_message', :collection => @messages[0..0]
+.next.clearfix= render :partial => 'messages/next_message', :collection => @messages[1..10]
 = will_paginate @messages  

@@ -1,6 +1,9 @@
-.message
-  .body= next_message.body
-  %span.date= next_message.created_at.strftime("%H:%M")
-  %span.author
-    od
-    = next_message.name
+.message.clearfix
+  .label
+    %span.author
+      = next_message.name
+    %br/
+    %span.date= next_message.created_at.strftime("%Y-%H-%m %H:%M")
+  .body
+    .arrow= image_tag '/images/arrow.gif', :size => '24x25'
+    = next_message.body

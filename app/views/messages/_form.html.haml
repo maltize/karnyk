@@ -1,24 +1,21 @@
 = simple_form_for @message do |f|
   - if @message.errors.any?
 
-  = f.input :name
+  = f.input :name, :label => 'Twoje imię:'
 
-  = f.input :target_name
+  = f.input :target_name, :label => 'imię odbiorcy:'
 
-  = f.input :target_email
+  = f.input :target_email, :label => 'email odbiorcy:'
 
-  = f.input :body
-  
-  #signs_left
-    pozostało
-    %p= 140
+  = f.input :body, :label => 'Karnego Kutasa wręczam za:'
     
-  :javascript
-    $("#message_body").keyup(function(){
-        signsLeft("message_body", 140, "signs_left")
-    })
-
-  = f.input :terms_conditions, :label => 'Akceptuje regulamin'
+  = f.input :terms_conditions, :label => "akceptuję <a href='#{rules_path}'>regulamin</a><br/> w skrócie: nie odpowiadamy, za to co i komu wysyłasz!"
       
   .actions
-    = f.button :submit, 'Wyślij Karnego Kutasa'
+    = f.button :submit, 'Wyślij'
+
+:javascript
+  $('#new_message div.text').prepend("<div id='signs_left'><p>140</p></div>")
+  $("#message_body").keyup(function(){
+      signsLeft("message_body", 140, "signs_left")
+  });

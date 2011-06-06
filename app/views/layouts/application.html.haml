@@ -1,54 +1,58 @@
-!!!
+!!! 5
 %html
   %head
-    %title Karny Kutas
-    %html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
+    %title Karny Kutas | wyślij Karnego Kutasa znajomym!
+    //%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
     = render :partial => 'layouts/stylesheets'
     = render :partial => 'layouts/javascripts'
 
     = csrf_meta_tag
 
   %body
-
-    %header
+    %header.clearfix
       #logo
         = link_to image_tag('/images/logo.gif', :size => '225x138', :alt => 'Karny Kutas', :title => 'Karny Kutas', :border => '0'), root_path
-      #teaser.shadow
+      #teaser
         %ul
-          %li
-            %h2 Znajomy Ci podpadł?
-          %li
-            %h2 Chuck Noris nie sprostał zadaniu?
-          %li
-            %h2 Karny Kutas dopomoże!
+          %li Znajomy Ci podpadł?
+          %li Chuck Noris nie sprostał zadaniu?
+          %li Karny Kutas dopomoże!
 
-    %section#main_content.white.shadow
-      #flash_message
-        - if flash[:notice]
-          %p#flash_notice
-            = flash[:notice]
-          - flash[:notice] = nil
-        - if flash[:error]
-          %p#flash_error
-            = flash[:error]
-          - flash[:error] = nil
+    %section#main_content.white
       = yield
 
-    %section#search.turquoise.shadow
-      %ul
-        %li
-          %h1 Sprawdź swoje Karne Kutasy
+    %section#search.turquoise
+      .header
+        %h2 Sprawdź swoje Karne Kutasy
+      %br/
       = render :partial => 'messages/search_form'
     
     %footer.shadow
       %ul
         %li= link_to "Regulamin", rules_path
-        %li= '|'
         %li= link_to "Polityka prywatności", privacy_path
-        %li= '|'
         %li= mail_to "info@karnykutas.com", "Kontakt", :encode => "javascript"
-      %ul
-        %li
-          Powered by vidlasty & maltize
-        %li
-          Supported by volcanic
+
+    %section.blank
+      %h2
+        brought to you by
+        %span
+          = link_to '@bwidlak', 'http://twitter.com/#!/bwidlak'
+        &
+        %span
+          = link_to '@maltize', 'http://twitter.com/#!/maltize'
+      %h2
+        supported via
+        %span
+          = link_to 'volcanic.co.uk', 'http://volcanic.co.uk'
+        version 1.0
+    #flash_message
+      - flash.each do |name, msg|
+        = content_tag :div, msg, :id => "flash_#{name}" unless (name.to_sym == :recaptcha_error) || (name.to_sym == :ajax)
+
+      - if flash[:ajax]
+        #ajax_status
+          = flash[:ajax]
+      - else
+        #ajax_status{:style => "display:none"}
+    

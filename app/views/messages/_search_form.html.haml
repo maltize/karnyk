@@ -1,4 +1,6 @@
 = form_tag search_messages_path, :method => :get do
-  = text_field_tag :query
-  %span.submit
+  .input
+    = label_tag 'Twój adres email:'
+    = text_field_tag :query
+  .actions
     = submit_tag 'Szukaj'

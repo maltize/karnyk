@@ -1,7 +1,9 @@
-.first_message
+.message.clearfix
+  .label
+    %span.author
+      = first_message.name
+    %br/
+    %span.date= first_message.created_at.strftime("%Y-%H-%m %H:%M")
   .body
+    .arrow= image_tag '/images/arrow.gif', :size => '24x25'
     = first_message.body
-  %span.date= first_message.created_at.strftime("%Y-%H-%M")
-  %span.author
-    od
-    = first_message.name

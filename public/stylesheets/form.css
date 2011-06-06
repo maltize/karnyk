@@ -1,51 +1,67 @@
 div label abbr {
   color: #f36b59;
+  display: none;
 }
 
-div.string {
-  margin: 14px;
+div.string, div.text, div.boolean {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+div.boolean {
+  width: 260px;
 }
 
 div.string label {
   display: block;
-  width: 150px;
+  width: 160px;
   text-align: right;
   float: left;
   margin-right: 20px;
+  margin-top: 5px;
+  font-style: italic;
 }
 
 div.string input {
   width: 300px;
-  padding: 5px;
+  padding: 10px;
   border: 1px solid #d2d9dc;
-  -moz-box-shadow: 0px 0px 0px 5px #f7f9fa;
-  -webkit-box-shadow: 0px 0px 0px 5px #f7f9fa;
-  box-shadow: 0px 0px 0px 5px #f7f9fa;
-  -khtml-box-shadow: 0px 0px 0px 5px #f7f9fa;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -khtml-border-radius: 2px;
-  border-radius: 2px;
+  -moz-box-shadow: 4px 4px 4px 0px #f3f3f3 inset;
+  -webkit-box-shadow: 4px 4px 4px 0px #f3f3f3 inset;
+  box-shadow: 4px 4px 4px 0px #f3f3f3 inset;
+  -khtml-box-shadow: 4px 4px 4px 0px #f3f3f3 inset;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  -khtml-border-radius: 1px;
+  border-radius: 1px;
+  outline: medium none;
+  width: 380px;
+}
+
+div.field_with_errors.string input,
+div.field_with_errors.text textarea {
+  border: 1px solid #ffc5ba;
+  -moz-box-shadow: 4px 4px 4px 0px #ffc5ba inset;
+  -webkit-box-shadow: 4px 4px 4px 0px #ffc5ba inset;
+  box-shadow: 4px 4px 4px 0px #ffc5ba inset;
+  -khtml-box-shadow: 4px 4px 4px 0px #ffc5ba inset;
 }
 
 div.string input:focus {
   border: 1px solid #b7d4ea;
-  -moz-box-shadow: 0px 0px 0px 5px #f0f7fc;
-  -webkit-box-shadow: 0px 0px 0px 5px #f0f7fc;
-  box-shadow: 0px 0px 0px 5px #f0f7fc;
-  -khtml-box-shadow: 0px 0px 0px 5px #f0f7fc;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -khtml-border-radius: 2px;
-  border-radius: 2px;
+  -moz-box-shadow: 4px 4px 4px 0px #f0f7fc inset;
+  -webkit-box-shadow: 4px 4px 4px 0px #f0f7fc inset;
+  box-shadow: 4px 4px 4px 0px #f0f7fc inset;
+  -khtml-box-shadow: 4px 4px 4px 0px #f0f7fc inset;
 }
 
 span.error {
   clear: both;
   display: block;
-  margin-left: 170px;
-  padding-left: 20px;
+  margin-left: 190px;
+  padding-left: 25px;
   color: #f36b59;
+  font-style: italic;
 }
 
 .input span {
@@ -56,53 +72,50 @@ span.error {
   margin-left: 0px;
 }
 
-div.text {
-  margin: 20px;
-}
-
 div.text label {
   display: block;
-  width: 150px;
+  width: 160px;
   text-align: right;
   float: left;
   margin-right: 20px;
+  font-style: italic;
 }
 
 div.text textarea {
   width: 300px;
-  height: 80px;
-  padding: 5px;
-  border: 1px solid #d2d9dc;
-  -moz-box-shadow: 0px 0px 0px 5px #f7f9fa;
-  -webkit-box-shadow: 0px 0px 0px 5px #f7f9fa;
-  box-shadow: 0px 0px 0px 5px #f7f9fa;
-  -khtml-box-shadow: 0px 0px 0px 5px #f7f9fa;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -khtml-border-radius: 2px;
-  border-radius: 2px;
+  height: 128px;
+  padding: 10px;
+  border: 1px solid #e4e4e4;
+  -moz-box-shadow: 4px 4px 4px 0px #f3f3f3 inset;
+  -webkit-box-shadow: 4px 4px 4px 0px #f3f3f3 inset;
+  box-shadow: 4px 4px 4px 0px #f3f3f3 inset;
+  -khtml-box-shadow: 4px 4px 4px 0px #f3f3f3 inset;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  -khtml-border-radius: 1px;
+  border-radius: 1px;
+  resize: none;
+  outline: 1px medium none;
+  width: 380px;
+  font: "Georgia","Verdana",sans-serif;
 }
 
 div.text textarea:focus {
   border: 1px solid #b7d4ea;
-  -moz-box-shadow: 0px 0px 3px 5px #f0f7fc;
-  -webkit-box-shadow: 0px 0px 3px 5px #f0f7fc;
-  box-shadow: 0px 0px 3px 5px #f0f7fc;
-  -khtml-box-shadow: 0px 0px 3px 5px #f0f7fc;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -khtml-border-radius: 2px;
-  border-radius: 2px;
+  -moz-box-shadow: 0px 0px 3px 5px #f0f7fc inset ;
+  -webkit-box-shadow: 0px 0px 3px 5px #f0f7fc inset;
+  box-shadow: 0px 0px 3px 5px #f0f7fc inset;
+  -khtml-box-shadow: 0px 0px 3px 5px #f0f7fc inset;
 }
 
 
 div.boolean {
-  margin: 14px;
-  padding-left: 150px;
+  padding-left: 180px;
 }
 
 div.boolean label {
-  margin-left:10px;
+  margin-left: 10px;
+  font-style: italic;
 }
 
 div.boolean input {
@@ -110,37 +123,41 @@ div.boolean input {
 }
 
 .actions {
-  text-align: right;
+  margin-right: 30px;
+  display: block;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
 }
 
 .actions input.button {
+  font-style: italic;
+  font-family: Georgia;
+  font-size: 26px;
   position: relative;
   background-color: #f36b59;
   border: none;
   color: white;
-  padding: 5px;
-  -moz-box-shadow: 7px 7px 0px #dadada;
-  -webkit-box-shadow: 7px 7px 0px #dadada;
-  box-shadow: 7px 7px 0px #dadada;
-  -khtml-box-shadow: 7px 7px 0px #dadada;
-}
-
-.actions input.button:focus {
-  top: 7px;
-  left: 7px;
-  -moz-box-shadow: 0px 0px 0px #dadada;
-  -webkit-box-shadow: 0px 0px 0px #dadada;
-  box-shadow: 0px 0px 0px #dadada;
-  -khtml-box-shadow: 0px 0px 0px #dadada;
+  padding: 4px 8px;
+  font: arial;
+  text-shadow: 2px 2px 0px #b35044;
+  cursor: pointer;
+  border: 1px solid #B35044;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  
 }
 
 #signs_left {
-  color: gray;
+  position: absolute;
+  color: rgba( 0,0,0,0.2);
   font-style: italic;
-}
-
-#signs_left p {
-  display:inline;
+  display: inline;
+  font-size: 40px;
+  right: 35px;
+  top: 110px;
 }
 
 #signs_left.formError {
@@ -154,27 +171,48 @@ div.boolean input {
   background-repeat: no-repeat;
 }
 
-#search input {
-  background: #4ea99f;
-  width: 300px;
-  padding: 5px 9px;
-  border-top: 1px solid #7dcdc4;
-  border-right: 1px solid #84d1c8;
-  border-left: 1px solid #84d1c8;
-  border-bottom: 1px solid #9cdad3;
-  -moz-box-shadow: 0px 0px 5px 3px #439d91 inset;
-  -webkit-box-shadow: 0px 0px 5px 3px #439d91 inset;
-  box-shadow: 0px 0px 5px 3px #439d91 inset;
-  -khtml-box-shadow: 0px 0px 5px 3px #439d91 inset;
-  -moz-border-radius: 14px;
-  -webkit-border-radius: 14px;
-  -khtml-border-radius: 13px;
-  border-radius: 10px;
-  width: 240px;
-  color: white;
+#search .input label {
+  display: block;
+  width: 160px;
+  text-align: right;
+  float: left;
+  margin-right: 20px;
+  margin-top: 5px;
+  font-style: italic;
 }
 
-#search span.submit input {
-  width: 100px;
+#search .input input {
+  padding: 10px;
+  border: 1px solid #64a49d;
+  -moz-box-shadow: 4px 4px 4px 0px #68ada6 inset;
+  -webkit-box-shadow: 4px 4px 4px 0px #68ada6 inset;
+  box-shadow: 4px 4px 4px 0px #68ada6 inset;
+  -khtml-box-shadow: 4px 4px 4px 0px #68ada6 inset;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  -khtml-border-radius: 1px;
+  border-radius: 1px;
+  outline: medium none;
+  width: 250px;
+  background-color: transparent;
+}
+
+#search .actions input {
+  border: 1px solid #4b8c7b;
+  font-style: italic;
+  display: inline;
+  font-size: 26px;
+  background: #4ea99f;
   cursor: pointer;
+  color: white;
+  padding: 4px 8px;
+  text-shadow: 2px 2px 0px #3f695e;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+}
+
+form {
+  position: relative;
 }

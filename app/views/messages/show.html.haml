@@ -1,5 +1,6 @@
 - if @message
-  %h4= @message.try(:target_email)
-  = render :partial => 'messages/first_message', :collection => [@message]
-  = render :partial => 'messages/next_message', :collection => @messages
+  .first
+    %h4= @message.try(:target_email)
+    = render :partial => 'messages/first_message', :collection => [@message]
+  .next= render :partial => 'messages/next_message', :collection => @messages
   = will_paginate @messages

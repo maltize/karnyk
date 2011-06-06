@@ -21,7 +21,7 @@ class MessagesController < ApplicationController
       flash[:notice] = "Karny Kutas został poprawnie wysłany."
       redirect_to root_path
     else
-      flash[:error] = "Karny kutas nie wysłany"
+      flash[:error] = "Karny kutas nie wysłany! popraw formularz."
       render :action => "new"
     end
   end
@@ -29,12 +29,10 @@ class MessagesController < ApplicationController
   def search
     @message = Message.where(:target_email => params[:query].strip).first
     if @message
-      @messages = Message.where(:target_email => params[:query].strip).paginate(
-      :page => params[:page], :per_page => 20
-    )
+      @messages = Message.where(:target_email => params[:query].strip).order("id DESC").paginate(:page => params[:page], :per_page => 20)
     else
       @message = Message.new
-      flash[:error] = "ten adres nie otrzymał Karnego Kutasa. Wyślij tego pierwszego!"
+      flash[:error] = "Podany email nie ma otrzymał jeszcze żadnego Karnego Kutasa."
       render :action => "new"
     end
   end

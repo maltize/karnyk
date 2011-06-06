@@ -1,6 +1,9 @@
 = javascript_include_tag "jquery.min", "application", "key_follow", "cufon-yui", "Bebas_Neue_400.font",  :recursive => true
 
 :javascript
+  'article aside footer header nav section time'.replace(/\w+/g,function(n){document.createElement(n)})
+
+:javascript
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-21091929-1']);
   _gaq.push(['_trackPageview']);
@@ -13,7 +16,10 @@
   
 :javascript
   Cufon.replace('h1');
-  Cufon.replace('h2');
-  //Cufon.replace('h3');
-  // Cufon.replace('#menu');
-  Cufon.replace('#flash_message');
+  Cufon.replace('div#teaser li', {
+    textShadow: '#245c90 1px 1px, #467eb2 2px 2px'
+  });
+  Cufon.replace('div.header h2', {
+    textShadow: '#b35044 1px 1px, #d3594a 2px 2px'
+  });
+  

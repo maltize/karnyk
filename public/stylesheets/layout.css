@@ -5,35 +5,32 @@ header, section, footer, aside, nav, article {
 body {
   background-color: #ececec;
   background-image: url("/images/bg.gif");
-  color: #313B41;
-  font: 14px/1.6em "Lucida Grande","Verdana",sans-serif;
-  margin: 10px auto;
+  color: #444;
+  font: 18px/1.5em Georgia, "Georgia";
   padding: 0;
-  width: 642px;
-}
-
-#logo, #teaser {
-  width: 274px;
-  display:inline-block;
-  padding: 14px;
-  margin-left: 14px;
+  margin: 0px;
 }
 
 #logo {
-
+  width: 274px;
+  float: left;
 }
 
 #teaser {
   color: white;
   background-color: #309ec1;
+  width: 274px;
+  padding: 14px;
+  margin-left: 14px;
+  float: right;
 }
 
 #teaser ul li,
 #search ul li,
 #main_content ul li {
-  margin-left: 14px;
-  list-style-type: disc;
-  font-size: 2em;
+  font-size: 1.8em;
+  line-height:1em;
+  padding: 0px;
 }
 
 #main_content ul li {
@@ -45,6 +42,43 @@ h1 {
   margin: 0 0 14px 0;
   padding: 0;
   font-size: 2.5em;
+}
+
+h2 {
+  display: inline;
+  color: white;
+  padding: 5px 15px;
+  text-shadow: 1px 1px 0px #b35044;
+  background: #e57662 url("/images/h2_bg.png") 0 0;
+  }
+
+section.blank {
+  padding: 0px;
+  margin-bottom: 10px;
+}
+
+section.blank h2,
+section.blank p {
+  font:"Georgia","Verdana",sans-serif;;
+  text-shadow: 1px 1px 0px #b35044;
+  padding: 0px;
+  text-shadow: none;
+  background: none;
+  text-shadow: 1px 1px 0px #b35044;
+  font-size: 16px;
+  font-style: italic;
+  display: block;
+  text-align: right;
+  color: white;
+}
+
+section.blank h2 span a {
+  color: #f4c0ba;
+  font-weight: bold;
+}
+
+section.blank h2 span a:hover {
+  color: #f36b59;
 }
 
 #search ul {
@@ -71,6 +105,12 @@ p {
 
 a {
   color: #f36b59;
+  text-decoration: none;
+  border-bottom: 1px dotted #b1b1b1;
+}
+
+a:hover {
+  border-bottom: 1px solid #f36b59;
 }
 
 #teaser ul li h2 {
@@ -87,17 +127,27 @@ a {
   color: #fff;
 }
 
-footer {
-  background-color: #ffffff;
-  color: #313B41;
+header {
+  width: 632px;
+  margin: 15px auto 0px auto;
+  display: block!important;
 }
 
 section, footer {
-  margin: 14px 7px 0px 7px;
-  padding: 14px;
+  width: 612px;
+  margin: 15px auto 0px auto;
+  padding: 20px 10px 10px 10px;
+}
+
+footer {
+  background-color: #ffffff;
+  color: #313B41;
+  font-size: 13px;
+  padding: 10px;
 }
 
 footer ul li {
+  margin-left: 15px;
   display:inline;
 }
 
@@ -119,12 +169,25 @@ footer ul li {
 
 .turquoise {
   background-color: #7dcdc4;
-  color: #fff;
 }
 
-.shadow {
-  -moz-box-shadow: 7px 7px 0px #dadada;
-  -webkit-box-shadow: 7px 7px 0px #dadada;
-  box-shadow: 7px 7px 0px #dadada;
-  -khtml-box-shadow: 7px 7px 0px #dadada;
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
 }
