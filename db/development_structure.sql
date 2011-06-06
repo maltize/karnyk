@@ -15,7 +15,7 @@ CREATE TABLE `messages` (
   KEY `index_messages_on_target_email` (`target_email`),
   KEY `index_messages_on_status` (`status`),
   KEY `index_messages_on_permalink` (`permalink`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `schema_migrations` (
   `version` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
