@@ -1,6 +1,10 @@
 - if @message
-  .first
-    %h4= @message.try(:target_email)
+  .first.clearfix
+    .header.clearfix
+      %h2
+        = '#'
+        = @messages.count
+    .account{ :styles => 'float: rigth;'}= @message.try(:target_email)
     = render :partial => 'messages/first_message', :collection => [@message]
-  .next= render :partial => 'messages/next_message', :collection => @messages
+  .next.clearfix= render :partial => 'messages/next_message', :collection => @messages
   = will_paginate @messages
