@@ -4,7 +4,7 @@ module MessagesHelper
 
   # Replace urls with 'a href' link
   def sexy(body)
-    body.gsub(URL_MATCHER, link_to("http://\\2", "http://\\2"))
+    body.gsub(URL_MATCHER, link_to("http://\\2", "http://\\2", :target => "_blank"))
   end
 
 end
