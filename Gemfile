@@ -30,6 +30,7 @@ gem 'simple_form'
 
 group :development do
   gem 'mongrel'
+  gem 'heroku'
 end
 
 # Bundle gems for the local environment. Make sure to
