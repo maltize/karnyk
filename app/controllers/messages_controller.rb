@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
 
   def show
     @message = Message.where(:permalink => params[:permalink]).first
-    @messages = Message.where(:target_email => @message.target_email).where(['id != ?', @message.id]).paginate(
+    @messages = Message.where(:target_email => @message.target_email).where(['id != ?', @message.id]).order("id DESC").paginate(
       :page => params[:page], :per_page => 20
     ) if @message
   end
