@@ -113,6 +113,10 @@ a:hover {
   border-bottom: 1px solid #f36b59;
 }
 
+#teaser {
+  background: #e57662 url("/images/h2_bg_blue.png") 0 0;
+}
+
 #teaser ul li h2 {
   font-size: 1em;
   color: white;
