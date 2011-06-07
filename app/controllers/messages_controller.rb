@@ -2,9 +2,12 @@ class MessagesController < ApplicationController
 
   def show
     @message = Message.where(:permalink => params[:permalink]).first
-    @messages = Message.where(:target_email => @message.target_email).where(['id != ?', @message.id]).order("id DESC").paginate(
-      :page => params[:page], :per_page => 20
-    ) if @message
+    if @message
+      @messages = Message.where(:target_email => @message.target_email).where(['id != ?', @message.id]).order("id DESC").paginate(
+        :page => params[:page], :per_page => 20
+      )
+      @messages_count = @messages.count + 1
+    end
   end
 
   def new
@@ -30,6 +33,7 @@ class MessagesController < ApplicationController
     @message = Message.where(:target_email => params[:query].strip).first
     if @message
       @messages = Message.where(:target_email => params[:query].strip).order("id DESC").paginate(:page => params[:page], :per_page => 20)
+      @messages_count = @messages.count
     else
       @message = Message.new
       flash[:error] = "Podany email nie ma otrzymał jeszcze żadnego Karnego Kutasa."
