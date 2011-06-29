@@ -36,7 +36,7 @@ class MessagesController < ApplicationController
       @messages_count = @messages.count
     else
       @message = Message.new
-      flash[:error] = "Podany email nie ma otrzymał jeszcze żadnego Karnego Kutasa."
+      flash[:error] = "Podany email nie otrzymał jeszcze żadnego Karnego Kutasa."
       render :action => "new"
     end
   end
